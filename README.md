@@ -1,0 +1,1 @@
+This is the Frontend Design of our website Smart Street Lightning based on Smart City Concepts where Street Light runs according to the need of people saving plenty of energy. Not Only this its collects all the data from sensors and send it to the cloud by analyzing all thus data we can comment on traffic, pollution, etc.    
