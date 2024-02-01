@@ -1,0 +1,165 @@
+@media screen and (max-width:450px) {
+       *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        nav
+        {
+            width: 100%;
+            top: 0;
+            left: 0;
+            height : 515px;
+            line-height: 75px;
+            padding: 0px 100px;
+            position : fixed;
+            background-color: cyan;
+            border: black;
+            z-index: 9999;
+        } 
+        .logo img
+        {
+            float: left ;
+            margin-right: 15px;
+            padding-top: 25px ;
+            width : 200px ;
+            height : 200px; 
+        }
+       .logo p
+        {
+            font-size: 80px;
+            font-weight: bold;
+            margin-top: 100px;
+            margin-left: 30px;
+            float:left;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 15px;
+            cursor: pointer; 
+            font-family: cursive;
+        }
+        nav ul
+        {
+            
+            width: 1400px;
+            height: 150px;
+            margin-top: 150px;
+            padding: 0px;
+            background-color: black;
+            float: right;
+            margin-right: 15px;
+            margin-left: 15px;
+        }
+        nav li
+        {
+            
+            float: left;
+        }
+        nav li a
+        {
+            font-size: 50px;
+            text-align: center;
+            margin-right: 180px;
+            padding: 0px, 0px;
+            color: white;
+            text-decoration: none;  
+            background-attachment: fixed;
+        }
+        .btn-login
+        {
+            padding: 10px 15px;
+            width: 150px;
+            height: 100px;
+            font-size: 50px;
+            color: white;
+            background-color: black;
+            text-transform: uppercase;
+            cursor:pointer;
+        }
+        .overlay
+        {
+            width: 100% ;
+            height: 3000px ;
+            background: rgba(0, 0, 0, 0.5) ;
+            
+            position : fixed ;
+            top: 0%;
+            z-index: -1;
+            opacity: 0 ;
+        }
+        .showoverlay
+        {
+           opacity: 1;
+           z-index: 1 ;
+        }
+        .loginform
+        {
+            width: 1400px;
+            height: 1400px;
+            padding: 30px 20px ;
+            background-color:white ;
+            position: absolute;
+            transition: 1s;
+            left: 50%;
+            top: -470%;
+            z-index: 9;
+            box-shadow: 0px 0px 10px 3px #ccc;
+            transform: translate(-50%,50%);
+            font-size: 50px;
+        }
+        .showloginform
+        {
+            top : 50%;
+        }
+        .loginform input 
+        {
+            width : 800px ;
+            font-size: 50px;
+            height : 100px ;
+            margin-bottom: 15px ;
+        }
+        .loginform button
+        {
+            width: 300px;
+            height: 100px;
+            background-color: black ;
+            color: white;
+            padding: 10px 15px;
+            font-size: 50px;
+        }
+        .loginform span
+        {
+            position: absolute ;
+            right: 0px ;
+            width : 250px ;
+            height: 100px ;
+            background-color: green;
+            text-align: center;
+            color: white;
+            line-height: 80px;
+            top: 0% ;
+        }
+        .Scroll-container
+        {
+           margin-top: 500px;
+           width: 400px ;
+           height : 400px ;
+           overflow: scroll;
+           
+           
+        }
+        footer
+        {
+            background-color: cyan;
+            margin-top: 300%;
+            left: 0;
+            padding: 20px 80px;
+            align-items: center;
+            font-size: 70px;
+            width: 1520px;
+            height: 250px;
+            text-align: center;
+            z-index: 10000;
+        }       
+}

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+    <title> Mission Solar - | Home |</title>
+    <style> 
+       *{
+            margin:0px;
+            padding: 0px;
+            box-sizing: border-box;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        body
+        {
+            padding: 00px;
+        }
+        nav
+        {
+            width: 100%;
+            top: 0;
+            left: 0;
+            height : 100px;
+            line-height: 75px;
+            padding: 0px 100px;
+            position : fixed;
+            background-color: #324ab2;
+            border: black;
+            z-index: 9999;
+        }
+        .logo img
+        {
+            float: left ;
+            margin-right: 20px;
+            padding-top: 20px ;
+            width : 50px ;
+            height : 80px; 
+        }
+       .logo p
+        {
+            font-size: 20px;
+            font-weight: bold;
+            float:left;
+            color: black;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            cursor: pointer; 
+            font-family: cursive;
+        }
+        nav ul
+        {
+            float: right;
+        }
+        nav li
+        {
+            
+            float: left;
+        }
+        nav li a
+        {
+            font-size: 17px;
+            text-align: center;
+            text-transform: uppercase;
+            padding: 0px, 30px;
+            color: white;
+            text-decoration: none;
+            margin-right: 50px; 
+            background-attachment: fixed;
+
+        }
+        nav li a:hover
+        {
+            color: #ff8c69;
+            transition: all 0.4s ease 0s;
+        }
+        .btn-logic
+        {
+            padding: 10px 15px;
+            background-color: blue;
+            color: white;
+            cursor:pointer;
+        }
+        .overlay
+        {
+            width: 100% ;
+            height: 100vh ;
+            background: rgba(0, 0, 0, 0.5) ;
+            position : fixed ;
+            top: 0%;
+            z-index: -1;
+            opacity: 0 ;
+        }
+        .showoverlay
+        {
+           opacity: 1;
+           z-index: 1 ;
+        }
+        .loginform
+        {
+            width: 350px;
+            height: 300px;
+            padding: 30px 20px ;
+            background-color:white ;
+            position: absolute;
+            transition: 1s;
+            left: 50%;
+            top: -500%;
+            z-index: 9;
+            box-shadow: 0px 0px 10px 3px #ccc;
+            transform: translate(-50%,50%);
+            border-color: blue;
+            border-radius: 5%;
+        }
+        input, textarea
+        {
+            width: 90%;
+            padding: 10px;
+            font-size: 15px;
+            border: black;
+        }
+        .showloginform
+        {
+            top : 50%;
+        }
+        .loginform input 
+        {
+            width : 100 px ;
+            height : 35 px ;
+            margin-bottom: 15px ;
+        }
+        .loginform button
+        {
+            background-color: #324ab2 ;
+            color: white;
+            padding: 10px 15px;
+        }
+        .loginform span
+        {
+            position: absolute ;
+            right: 0px ;
+            width : 30px ;
+            height: 30px ;
+            background-color: green;
+            text-align: center;
+            color: white;
+            line-height: 30px;
+            top: 0% ;
+        }
+        main.img
+        {
+            width : 1000px;
+            height : 800px;
+            object-fit: contain;
+            
+            
+        }
+        .Scroll-container
+        {
+           width: 100% ;
+           height : 500px ;
+           box-shadow: rgba(50, 50, 94, 0.5);
+           margin: 100px auto;
+           
+        }
+        footer
+        {
+            background-color: #324ab2;
+            color:azure;
+            margin-top: 9%;
+            left: 0;
+            padding: 20px 80px;
+            align-items: center;
+            width: 1520px;
+            height: 40px;
+            text-align: center;
+            z-index: 10000;
+        }
+        
+    </style>
+    <link rel="stylesheet" href="responsivehome.css">
+</head>
+<body>    
+    <nav> 
+        <div class="logo">
+            <img src="photo.jpg">
+            <p> Mission Solar </p>
+                <ul type="none">
+                <li> <a href = "#"> Home </a>              </li>
+                <li> <a href = "Maps.html"> Maps </a>              </li>
+                <li> <a href = "About.html"> About </a> </li>
+                <button class="btn-login">Login</button> </p>
+            </ul>
+        </div>    
+        <div class="overlay"> </div>
+        <div class="loginform">
+        <span>&times;</span>
+        <form action="index.php" method="post">  
+                    <input type ="text" name="name" id="name" placeholder="Enter Your Name">
+                    <input type ="password" name="password" id="password" placeholder="Enter Your Password">
+                    <button class="btn">Submit</button>
+        </form>
+        </div>
+    </nav>
+    <main> 
+        <div class ="Scroll-container">
+            <div id="img">
+                <img src="1.Detection.png"> 
+                <img src="2.Profile.png"> 
+                <img src="3.Light.png">                 
+                <img src="5.Saving.png"> 
+                <img src="6.Heatmaps.png">
+            </div> 
+        </div>
+    </main>
+    <footer>
+        <h6>All Rights Reserved @2023</h6>
+    </footer>
+</body> 
+<script>
+    function showModal() 
+    {
+        document.querySelector('.overlay').classList.add('showoverlay');
+        document.querySelector('.loginform').classList.add('showloginform');
+    }
+    function closeModal()
+    {
+        document.querySelector('.overlay').classList.remove('showoverlay');
+        document.querySelector('.loginform').classList.remove('showloginform');
+    }
+    var btnlogin=document.querySelector(".btn-login");
+    btnlogin.addEventListener("click",showModal)
+    var c=document.querySelector("span");
+    c.addEventListener("click",closeModal)
+    // Slider Function is Created to Slide Images on Homepage in the interval of 5 seconds. 
+    var img = document.getElementById('img');
+    var slides = ['1.Detection.png','2.Profile.png','3.Light.png','5.Saving.png','6.Heatmaps.png'];
+    var Start = 0;
+    function slider()
+    {
+        if(Start<slides.length)
+        {
+            Start = Start +1 ;
+        }
+        else
+        {
+            Start = 1;
+        }
+        console.log(img);
+        img.innerHTML="<img src="+slides[Start-1]+">";
+    } 
+    setInterval(slider,2000);   
+</script>
+</html>
